@@ -6,7 +6,7 @@ title: 'Recap: Social Innovation Summit 2018'
 
 Sustainability has always been an important topic in my life. But if I'm being honest, I don't really know much about it. I know the general concept, but not much beyond that. That is why I was so stoked about this conference. I learned that sustainability is part of something much bigger: social innovation.
 
-![Social Innovation Summit stage]({{ site.url }}/assets/img/2018/SIS2018.jpg)
+![Social Innovation Summit stage](/assets/img/2018/SIS2018.JPG)
 
 One of the sessions that I attended was a refugee crisis-related technology. Ben Mason of [betterplace-lab.org](http://www.betterplace-lab.org/en/) talked about what went wrong with the handful of application startups that closed its doors in Germany alone. It was a little bit sad to hear because a lot of these applications have a very novel goal in mind; they wanted to help, but the rise of applications that do the exact same thing only gave room for competition that is not needed. There was a huge lack of resources and the intended users of the app had a lower digital literacy than what they expected.
 

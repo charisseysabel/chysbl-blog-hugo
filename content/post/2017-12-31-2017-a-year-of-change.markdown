@@ -24,9 +24,9 @@ Below are some of the things that I did this year and what it taught me.
 
 ### 1: I Gave 2 Presentations
 
-![My presentation at Women Who Code Berlin]({{ site.url }}/assets/img/2017/year-of-change/wwc-presentation.jpg)
+![My presentation at Women Who Code Berlin](/assets/img/2017/year-of-change/wwc-presentation.jpg)
 
-![My presentation about the Zero Waste lifestyle]({{ site.url }}/assets/img/2017/year-of-change/zero-waste-presentation.jpg)
+![My presentation about the Zero Waste lifestyle](/assets/img/2017/year-of-change/zero-waste-presentation.jpg)
 
 I think at some point in our lives, most of us have no desire of talking in front of people. There is just that weird, nerve-wrecking feeling that crawls into our bellies whenever the thought comes to our minds. I remember I even dropped out of giving a presentation as my final project in school years ago. I got away with it, but my grade paid the price.
 
@@ -42,21 +42,21 @@ This might be a regular thing to do for other people, but I feel like this year 
 
 ### 4: I worked towards my digital drawing style
 
-![Tarn]({{site.url}}/assets/img/2017/year-of-change/tarn.png)
+![Tarn](/assets/img/2017/year-of-change/tarn.png)
 
-![Heteroclite]({{site.url}}/assets/img/2017/year-of-change/heteroclite.png)
+![Heteroclite](/assets/img/2017/year-of-change/heteroclite.png)
 
-![Oporopolist]({{site.url}}/assets/img/2017/year-of-change/oporopolist.png)
+![Oporopolist](/assets/img/2017/year-of-change/oporopolist.png)
 
 I think the ongoing [Words Project](https://charisseysabel.github.io/the-words-project/#/) is a good example of how much change happened this year. Although this project was initially something that I did to get more into animation, it evolved into something more, which allowed me to hone my digital drawing style into something that I feel that represents me (instead of imitating others' style). This project, no matter how tedious it can sometimes get, continues to help me express my creativity and imagination; helping me tell untold stories through a still image.
 
 ### 5: I finally finished "Aaghaveagh"
 
-![Aaghaveagh border detail]({{site.url}}/assets/img/2017/year-of-change/aaghaveagh-border-detail.jpg)
+![Aaghaveagh border detail](/assets/img/2017/year-of-change/aaghaveagh-border-detail.jpg)
 
-![Aaghaveagh roots detail]({{site.url}}/assets/img/2017/year-of-change/aaghaveagh-roots-detail.jpg)
+![Aaghaveagh roots detail](/assets/img/2017/year-of-change/aaghaveagh-roots-detail.jpg)
 
-![Aaghaveagh complete]({{site.url}}/assets/img/2017/year-of-change/aaghaveagh-complete.jpg)
+![Aaghaveagh complete](/assets/img/2017/year-of-change/aaghaveagh-complete.jpg)
 
 (pronounced “eye-AH-vey”, according to the internet)
 

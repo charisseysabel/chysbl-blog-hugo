@@ -17,7 +17,7 @@ As a simple exercise, I want to rebuild my FCC project: Quote Generator. Current
 
 Imagine adding an invisible grid on top of this layout. In the graphic design world, this is like activating the rulers inside Photoshop, which is what we usually do when it comes to aligning our items perfectly on the page. We create columns to align everything vertically, and set rows to align items horizontally.
 
-![Setting guides... you know what I mean]({{ site.url }}/assets/img/with-guides.png)
+![Setting guides... you know what I mean](/assets/img/with-guides.png)
 
 #### How do we replicate this in code?
 If you’ve used Flexbox before, then its helpful to think that it works pretty much the same for Grid: enclosing a group of elements together inside a grid display activates a bunch of other attributes that can only be used inside the grid container.
@@ -49,7 +49,7 @@ I’m also setting the topmost row to be `200px` high and let the second column 
 }
 {{< / highlight >}}
 
-![Visualizing the grid]({{ site.url }}/assets/img/with-grid.png)
+![Visualizing the grid](/assets/img/with-grid.png)
 
 A grid layout also wouldn’t be complete if there’s no way to add gaps between the items. We can use `grid-row-gap` and `grid-column-gap` to do just that. This might be useful should we add content to our currently-empty sidebar in the future. I like this feature a lot because it helps avoid the use of a container padding altogether.
 
@@ -57,7 +57,7 @@ Optionally, we can use `grid-gap` as a shorthand notation for the 2 attributes a
 
 Now, all that’s left is to explicitly position our quote at the bottom-right of our grid. We can do this using `grid-column` and `grid-row`. In the code below, we specify our item to start at grid line #2 (setting only one value makes the element stretch all the way to the last column). We do the same for the row position.
 
-![Grid and column lines]({{ site.url }}/assets/img/grid-columns-and-rows.png)
+![Grid and column lines](/assets/img/grid-columns-and-rows.png)
 
 {{< highlight css >}}
 .grid-item {

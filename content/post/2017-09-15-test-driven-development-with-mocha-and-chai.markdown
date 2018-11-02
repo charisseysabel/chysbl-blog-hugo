@@ -73,7 +73,7 @@ In our package.json, you can change the `tests` script to run mocha:
 
 and then on the Terminal, you can simply run `npm test`
 
-![A failed test]({{ site.url }}/assets/img/failed-test.png)
+![A failed test](/assets/img/failed-test.png)
 
 Once you’ve run the command, you’ll see that your test failed because, well, your values are not strictly (===) equal. You can change either value and run the command again to see how a successful test looks like!
 
@@ -130,7 +130,7 @@ describe('piglatin', function(){
 });
 {{< / highlight >}}
 
-![A passing test]({{ site.url }}/assets/img/passing-test.png)
+![A passing test](/assets/img/passing-test.png)
 
 ## Conclusion
 We scratched the surface of Test-Driven Development and implemented tests that challenged our understanding.
