@@ -2,6 +2,7 @@
 categories: conference
 date: "2018-03-17T09:00:00Z"
 title: 'Recap: Social Innovation Summit 2018'
+featured_image: '/assets/img/2018/SIS2018.JPG'
 ---
 
 Sustainability has always been an important topic in my life. But if I'm being honest, I don't really know much about it. I know the general concept, but not much beyond that. That is why I was so stoked about this conference. I learned that sustainability is part of something much bigger: social innovation.
