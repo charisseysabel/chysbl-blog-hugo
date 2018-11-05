@@ -2,3 +2,6 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Charisse Writes"
 theme = "ananke"
+[params]
+      custom_css = ["css/index.css"]
+      featured_image = "/images/atlantic.JPG"
