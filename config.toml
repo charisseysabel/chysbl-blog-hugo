@@ -1,7 +1,19 @@
+title = "Charisse Writes"
 baseURL = "https://www.charisseysabel.com/"
 languageCode = "en-us"
-title = "Charisse Writes"
 theme = "ananke"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+enableRobotsTXT = true
+
+[sitemap]
+	changefreq = "monthly"
+	priority = 0.5
+	filename = "sitemap.xml"
+
 [params]
-      custom_css = ["css/index.css"]
-      featured_image = "/images/atlantic.JPG"
+	custom_css = ["css/index.css"]
+	background_color_class = "bg-black"
+	featured_image = "/assets/img/2018/atlantic.jpg"
