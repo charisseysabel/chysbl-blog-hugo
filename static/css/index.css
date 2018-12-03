@@ -1,3 +1,39 @@
+header .bg-black-60 {
+    background-color: rgba(0,0,0,.2);
+}
+
 .bg-top {
     background-position: center;
 }
+
+h1 a.link {
+    color: #71B280;
+}
+
+header .bg-black,
+footer.bg-near-black {
+    background: #1c6f86;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #71B280, #1c6f86);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #71B280, #1c6f86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media screen and (min-width: 60em) {
+    main .tc-l {
+        text-align: inherit;
+    }
+}
+
+/* 'read more' links on every post on main page */
+.blah.w-100 a.ba {
+    display: none;
+}
+
+.w-100 > a.bg-mid-gray {
+    background-color: #71B280;
+}
+
+.w-100 > .dib {
+    display: block;
+}
+
+
