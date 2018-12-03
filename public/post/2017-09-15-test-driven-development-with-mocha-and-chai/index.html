@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Charisse Writes  | Test-Driven Development with Mocha and Chai</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.49.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Test-Driven Development with Mocha and Chai" />
+<meta property="og:description" content="So what exactly is Test-Driven Development?
+Based on my understanding after reading a couple articles, Test-Driven Development (TDD) is the process by which you write tests for your code to make sure that it works as expected. You do this even before you start to write a single line of code and then you allow your code to adapt to the test and make it pass. The benefit of it is that it helps keep your code clean and do what it’s supposed to do." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.charisseysabel.com/post/2017-09-15-test-driven-development-with-mocha-and-chai/" /><meta property="article:published_time" content="2017-09-15T09:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-09-15T09:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Test-Driven Development with Mocha and Chai">
+<meta itemprop="description" content="So what exactly is Test-Driven Development?
+Based on my understanding after reading a couple articles, Test-Driven Development (TDD) is the process by which you write tests for your code to make sure that it works as expected. You do this even before you start to write a single line of code and then you allow your code to adapt to the test and make it pass. The benefit of it is that it helps keep your code clean and do what it’s supposed to do.">
+
+
+<meta itemprop="datePublished" content="2017-09-15T09:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-09-15T09:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="953">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Test-Driven Development with Mocha and Chai"/>
+<meta name="twitter:description" content="So what exactly is Test-Driven Development?
+Based on my understanding after reading a couple articles, Test-Driven Development (TDD) is the process by which you write tests for your code to make sure that it works as expected. You do this even before you start to write a single line of code and then you allow your code to adapt to the test and make it pass. The benefit of it is that it helps keep your code clean and do what it’s supposed to do."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-light-yellow">
+      <nav class="pv3 ph3 ph4-ns bg-white" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://www.charisseysabel.com/" class="f3 fw4 black no-underline white-90 dib">
+      Charisse Writes
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7 bg-white" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Test-Driven Development with Mocha and Chai</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-09-15T09:00:00Z">September 15, 2017</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>So what exactly is Test-Driven Development?</p>
+
+<p>Based on my understanding after reading a couple articles, Test-Driven Development (TDD) is the process by which you write tests for your code to make sure that it works as expected. You do this even before you start to write a single line of code and then you allow your code to adapt to the test and make it pass. The benefit of it is that it helps keep your code clean and do what it’s supposed to do. With a well-written test, you can refactor your code safely over and over knowing that the functionality has not been broken.</p>
+
+<p><em>Behavior</em>-Driven Development (or BDD) is a branch of TDD. I find it really hard to figure out the difference between the two aside from the fact that BDD has a much easier to read syntax than TDD. It’s almost like a human-readable sentence! From the articles that I’ve read and the people I’ve asked, they said that BDD is almost like user stories. BDD tests the functionality as a whole, compared to TDD, which only tests a single unit or function (which is likely to be a part of the overall behaviour itself)</p>
+
+<h2 id="test-driven-development-with-mocha-chai">Test-Driven Development with Mocha + Chai</h2>
+
+<h4 id="what-is-mocha">What is Mocha?</h4>
+
+<p><a href="http://mochajs.org/#installation">Mocha</a> is one of the popular Javascript testing framework out there. It provides us with an environment from which we can automate our tests. And that environment happens to run on NodeJS.</p>
+
+<h4 id="what-is-chai">What is Chai?</h4>
+
+<p>To write a test, we need additional plugins like Chai. Chai is an assertion library. You can think of an assertion library as a language that is spoken inside a testing framework (in our case, Mocha). You can still use vanilla JS inside a testing framework though, for example, when declaring variables and functions, but to actually do the “testing”, you have to switch to the proper language. There are many assertion libraries out there, as you can see from <a href="http://mochajs.org/#assertions">Mocha’s Assertions</a> section.</p>
+
+<p>I’m a bit biased in the sense that this is the testing framework and assertion library that we use at <a href="https://www.small-improvements.com/">Small Improvements</a>, so I wanted to learn more about it and hopefully be able to contribute on this part of the codebase in the near future. But just a few google searches alone and you’ll see that there are many more frameworks out there such as <a href="https://github.com/avajs/ava">Ava</a>, <a href="http://sinonjs.org/">Sinon</a>, <a href="https://github.com/substack/tape">Tape</a> and <a href="https://jasmine.github.io/">Jasmine</a>. I haven’t actually tried them myself but I’m going to keep them at the back of my mind when building my next personal project.</p>
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<p>This tutorial assumes that you already have a project folder set up with npm and Node installed. At the time of writing, I’m using a node version ____ and an npm version ____</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// a very simple folder structure
+</span><span style="color:#75715e"></span><span style="color:#f92672">|</span><span style="color:#a6e22e">_</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span>
+<span style="color:#f92672">|</span><span style="color:#a6e22e">_</span> <span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">js</span>
+<span style="color:#f92672">|</span><span style="color:#a6e22e">_</span> <span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">js</span>
+</code></pre></div>
+
+<h4 id="installation">Installation</h4>
+
+<p>Installing a testing framework is just as easy as installing as another framework through npm:</p>
+
+<p>On the code below, we’ll install Mocha and Chai as a local dependency on our project
+<code>npm install --save-dev mocha chai</code></p>
+
+<h2 id="warm-up-writing-our-first-test">Warm up: Writing our first test</h2>
+
+<p>For our Mocha interface, we will use <a href="http://mochajs.org/#interfaces">BDD system</a> for ease of readability. The BDD system will provide us with chainable functions such as <code>describe()</code>, <code>it()</code>, and <code>before()</code>.</p>
+
+<p>First, inside <code>test.js</code>, we want to <em>describe</em> what we are testing.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;my function&#39;</span>, <span style="color:#66d9ef">function</span>(){
+  ...
+});
+</code></pre></div>
+
+<p>The first argument is a string that describes the functionality that you’re testing. Ideally, its the function’s name but you can name it whatever you want. It’s a reference for you, so that when you run your tests later, you know exactly what they are.</p>
+
+<p>Inside the describe block, we want to test the functionality that our function has to fulfill. We require <a href="http://chaijs.com/api/assert/">Chai’s assert interface</a> at the top of the file and access its <code>strictEqual</code> method to compare two values. For now, let’s make our test fail.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;chai&#39;</span>).<span style="color:#a6e22e">assert</span>;
+
+<span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;my function&#39;</span>, <span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should be equal&#39;</span>, <span style="color:#66d9ef">function</span>(){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isTrue</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">strictEqual</span>(<span style="color:#a6e22e">isTrue</span>, <span style="color:#66d9ef">false</span>);
+  });
+});
+</code></pre></div>
+
+<h2 id="running-tests">Running tests</h2>
+
+<p>In our package.json, you can change the <code>tests</code> script to run mocha:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
+  <span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;mocha&#34;</span>
+},
+</code></pre></div>
+
+<p>and then on the Terminal, you can simply run <code>npm test</code></p>
+
+<p><img src="/assets/img/failed-test.png" alt="A failed test" /></p>
+
+<p>Once you’ve run the command, you’ll see that your test failed because, well, your values are not strictly (===) equal. You can change either value and run the command again to see how a successful test looks like!</p>
+
+<h2 id="replicating-freecodecamp-s-piglatin-test">Replicating FreeCodeCamp’s PigLatin Test</h2>
+
+<p>Now that we have a basic idea on how to write tests using Mocha and Chai, let’s step our game up a bit and replicate the <a href="https://www.freecodecamp.org/challenges/pig-latin">PigLatin challenge on FCC</a>.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// index.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pigLatin</span>(<span style="color:#a6e22e">str</span>) {
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">obj</span>) {
+    <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;i&#39;</span>,<span style="color:#e6db74">&#39;u&#39;</span>,<span style="color:#e6db74">&#39;e&#39;</span>,<span style="color:#e6db74">&#39;o&#39;</span>]
+      .<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#a6e22e">obj</span>)) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span>
+      <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">obj</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">obj</span>;
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#a6e22e">check</span>(<span style="color:#ae81ff">0</span>))
+    .<span style="color:#a6e22e">concat</span>((<span style="color:#a6e22e">check</span>(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;w&#39;</span> <span style="color:#f92672">:</span>
+    <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">check</span>(<span style="color:#ae81ff">0</span>))) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;ay&#39;</span>);
+}
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pigLatin</span>; <span style="color:#75715e">// export the function so we can import it somewhere else
+</span><span style="color:#75715e"></span></code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// test.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">assert</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;chai&#39;</span>).<span style="color:#a6e22e">assert</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pigLatin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./index&#39;</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">california</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">algorithm</span>;
+
+<span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;piglatin&#39;</span>, <span style="color:#66d9ef">function</span>(){
+  <span style="color:#75715e">// we call the function inside the `before` block before we test it for equality
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">before</span>(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">california</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pigLatin</span>(<span style="color:#e6db74">&#39;california&#39;</span>);
+    <span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pigLatin</span>(<span style="color:#e6db74">&#39;algorithm&#39;</span>);
+  });
+
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should return a string&#39;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pigLatin</span>(<span style="color:#e6db74">&#39;hello&#39;</span>);
+    <span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">isString</span>(<span style="color:#a6e22e">test</span>);
+  });
+
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should be aliforniacay&#39;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aliforniacay&#39;</span>;
+    <span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">strictEqual</span>(<span style="color:#a6e22e">california</span>, <span style="color:#a6e22e">answer</span>);
+  });
+
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should be algorithmway&#39;</span>, <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;algorithmway&#39;</span>;
+    <span style="color:#a6e22e">assert</span>.<span style="color:#a6e22e">strictEqual</span>(<span style="color:#a6e22e">algorithm</span>, <span style="color:#a6e22e">answer</span>);
+  });
+});
+</code></pre></div>
+
+<p><img src="/assets/img/passing-test.png" alt="A passing test" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We scratched the surface of Test-Driven Development and implemented tests that challenged our understanding.</p>
+
+<p>Writing a good tests are important for every codebase. It ensures that we deliver as little buggy software to our users as possible. At first I thought that TDD is a very big and daunting task, but it turned out to be really fun!</p>
+
+<p>What are you going to test next?</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bottom-0 w-100 pa3 bg-light-yellow" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 black no-underline dn dib-ns pv2 ph3" href="https://www.charisseysabel.com/" >
+    &copy; 2018 Charisse Writes
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

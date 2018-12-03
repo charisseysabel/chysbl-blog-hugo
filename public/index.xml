@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Charisse Writes</title>
+    <link>https://www.charisseysabel.com/</link>
+    <description>Recent content on Charisse Writes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Apr 2018 08:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.charisseysabel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Trello Replica using React [Part 1]</title>
+      <link>https://www.charisseysabel.com/post/2018-04-22-trello-replica-using-react/</link>
+      <pubDate>Sun, 22 Apr 2018 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2018-04-22-trello-replica-using-react/</guid>
+      <description>Trello has been one of my favorite productivity apps because of its straightforwardness and the amount of things that you can do with such a simple interface. I wanted to experiment, so I created a simple drag and drop component in React that imitates Trello&amp;rsquo;s functionality using the HTML5 Drag and Drop API.
+Prerequisites  Basic knowledge of React Node and NPM installed create-react-app for a fast setup.  What&amp;rsquo;s in the Drag and Drop API?</description>
+    </item>
+    
+    <item>
+      <title>Recap: Social Innovation Summit 2018</title>
+      <link>https://www.charisseysabel.com/post/2018-03-17-social-innovation-summit/</link>
+      <pubDate>Sat, 17 Mar 2018 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2018-03-17-social-innovation-summit/</guid>
+      <description>Sustainability has always been an important topic in my life. But if I&amp;rsquo;m being honest, I don&amp;rsquo;t really know much about it. I know the general concept, but not much beyond that. That is why I was so stoked about this conference. I learned that sustainability is part of something much bigger: social innovation.
+One of the sessions that I attended was a refugee crisis-related technology. Ben Mason of betterplace-lab.</description>
+    </item>
+    
+    <item>
+      <title>Increase Color Contrast in React with CSS Custom Properties</title>
+      <link>https://www.charisseysabel.com/post/2018-02-23-increase-color-contrast-with-css-vars/</link>
+      <pubDate>Fri, 23 Feb 2018 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2018-02-23-increase-color-contrast-with-css-vars/</guid>
+      <description>I’ve heard of CSS Custom Properties before, although I didn’t think about using it until I came across a problem: how can I change styles dynamically if CSS Preprocessors do not support it?
+Motivation One of the most convenient features of a CSS Preprocessors is the fact that you can create variables, much like the same way as how you declare a variable in other programming languages. It makes our lives easier by following the DRY principle.</description>
+    </item>
+    
+    <item>
+      <title>2017: A Year of Change and the Road Ahead</title>
+      <link>https://www.charisseysabel.com/post/2017-12-31-2017-a-year-of-change/</link>
+      <pubDate>Sun, 31 Dec 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-12-31-2017-a-year-of-change/</guid>
+      <description>I would say that this year has been all about personal development. And as much as I wanted to level up more on the web development side, I think getting to know myself is also an important step that I shouldn&amp;rsquo;t skip.
+I wanted to be a lot of things and I felt confused about what I really want to be (and sometimes it still happens) and for some time I was convinced that I can be anything as long as I take the steps to get there.</description>
+    </item>
+    
+    <item>
+      <title>2 Things that I Learned as a UI/UX Interviewer</title>
+      <link>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</link>
+      <pubDate>Sat, 02 Dec 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</guid>
+      <description>I’ve been on both sides of the interview process. And although there is a lot to say on what to do and what not to do as a interviewee, I thought I’d share the lessons that I’ve learned as an interviewer so that designers, who are just getting started in the field, can get an idea on what goes into an interviewer’s mind.
+These are all my opinions and may or may not be the same for every organization.</description>
+    </item>
+    
+    <item>
+      <title>A Gentle Introduction to CSS Grid</title>
+      <link>https://www.charisseysabel.com/post/2017-10-15-a-gentle-introduction-to-css-grid/</link>
+      <pubDate>Sun, 15 Oct 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-10-15-a-gentle-introduction-to-css-grid/</guid>
+      <description>I wanted to take a look at CSS Grid for quite a while, so I rebuilt an old project using it.
+CSS Grids allow us to design a layout in a 2-dimensional style: horizontally and vertically. Unlike flexbox, which is only focused on only 1 dimension.
+I must admit that I was a bit hesitant about the idea of Grid because of the fact that flexbox has solved the problems that I faced with layouts today (at least most of them anyway).</description>
+    </item>
+    
+    <item>
+      <title>Test-Driven Development with Mocha and Chai</title>
+      <link>https://www.charisseysabel.com/post/2017-09-15-test-driven-development-with-mocha-and-chai/</link>
+      <pubDate>Fri, 15 Sep 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-09-15-test-driven-development-with-mocha-and-chai/</guid>
+      <description>So what exactly is Test-Driven Development?
+Based on my understanding after reading a couple articles, Test-Driven Development (TDD) is the process by which you write tests for your code to make sure that it works as expected. You do this even before you start to write a single line of code and then you allow your code to adapt to the test and make it pass. The benefit of it is that it helps keep your code clean and do what it’s supposed to do.</description>
+    </item>
+    
+    <item>
+      <title>3 Things to Keep in Mind When Starting a Blog</title>
+      <link>https://www.charisseysabel.com/post/2017-09-02-3-things-to-keep-in-mind-when-starting-a-blog/</link>
+      <pubDate>Sat, 02 Sep 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-09-02-3-things-to-keep-in-mind-when-starting-a-blog/</guid>
+      <description>Sometimes we just need to remind ourselves why we want to dive into the world of blogging.
+3 things, here we go.
+What is your goal? It&amp;rsquo;s important to keep in mind why you want to start / started blogging in the first place. I firmly believe that this will help you keep going during those times when you feel like you want to quit.
+My purpose for this blog is to be able to explain things to myself — as selfish as that sounds.</description>
+    </item>
+    
+    <item>
+      <title>Living Zero Waste</title>
+      <link>https://www.charisseysabel.com/post/2017-08-19-living-zero-waste/</link>
+      <pubDate>Sat, 19 Aug 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-08-19-living-zero-waste/</guid>
+      <description>Believe it or not, my Zero Waste journey started from a YouTube video. Watching TV has always been my family&amp;rsquo;s way of bonding – we would sit on the couch with a bowl of dinner on our laps and watch videos of YouTubers playing and screaming while videogames (my mom is a huge fan of video games) or just re-watch Jack Black / Jim Carrey movies after a long day of work in the family&amp;rsquo;s cafe.</description>
+    </item>
+    
+    <item>
+      <title>The Grunt Task Runner</title>
+      <link>https://www.charisseysabel.com/post/2017-08-05-the-grunt-task-runner/</link>
+      <pubDate>Sat, 05 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-08-05-the-grunt-task-runner/</guid>
+      <description>Task runners are great for automating tasks. Small, repetitive tasks such as minifying, uglifying or even just watching our files for changes can easily take up our time.
+I’ve read some articles online that says automation was once done using shell scripts. I haven’t really tried that myself (but now I’m really curious) but now that frontend technologies have evolved drastically these past few years, task runners like Gulp and Grunt took our frontend environment another step forward.</description>
+    </item>
+    
+    <item>
+      <title>Goals without Deadlines</title>
+      <link>https://www.charisseysabel.com/post/2017-07-15-goals-without-deadlines/</link>
+      <pubDate>Sat, 15 Jul 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-07-15-goals-without-deadlines/</guid>
+      <description>Have you ever failed to reach a goal? Like so many other people out there, I too, have set a goal for myself and in one way or another, failed to reach that goal on a set date.
+This is a blogpost outlining the talk that I have given at Women Who Code Berlin.
+So what exactly are goals? People have different definitions about it but for me, goals are the things or the outcomes that we want to achieve in life.</description>
+    </item>
+    
+    <item>
+      <title>Up and Running with Webpack</title>
+      <link>https://www.charisseysabel.com/post/2017-07-03-up-and-running-with-webpack/</link>
+      <pubDate>Mon, 03 Jul 2017 09:34:24 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-07-03-up-and-running-with-webpack/</guid>
+      <description>One of the most important things you have to have in your toolkit these days is the ability to use Webpack — and for a good reason. Webpack is a module bundler. It takes your assets — your JS files, CSS, images, etc — and outputs it as a single file, saving you with tons of trips back and forth from the server.
+I gotta admit, the first time I’ve set up my own Webpack configuration file, I was pretty stoked and nervous and overwhelmed at the same time.</description>
+    </item>
+    
+    <item>
+      <title>JS Promises</title>
+      <link>https://www.charisseysabel.com/post/2017-06-07-js-promises/</link>
+      <pubDate>Wed, 07 Jun 2017 09:34:24 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-06-07-js-promises/</guid>
+      <description>In the previous post, we used the XMLHttpRequest object which is a very simple and basic way of requesting data from the server. Recently, the ECMAScript 6 introduced a new API called Promises in the hopes of making asynchronous requests more pleasant. We’re gonna take a look at what Promises are and understand them through a little bit of an exercise.
+What are Promises? I have to admit that when I first heard someone say, “It returns a Promise”, I immediately go blank.</description>
+    </item>
+    
+    <item>
+      <title>Synchronous and Asynchronous Requests in Javascript</title>
+      <link>https://www.charisseysabel.com/post/2017-05-07-sync-and-async-requests/</link>
+      <pubDate>Sun, 07 May 2017 09:34:24 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-05-07-sync-and-async-requests/</guid>
+      <description>There are 2 types of requests that can Javascript can make: Synchronous and Asynchronous. But what is the difference between the two? And how do you make such requests?
+The difference between synchronous and asynchronous requests can be best explained by one of the comments from Stack Overflow:
+ SYNCHRONOUS
+You are in a queue to get a movie ticket. You cannot get one until everybody in front of you gets one, and the same applies to the people queued behind you.</description>
+    </item>
+    
+    <item>
+      <title>On Being Productive</title>
+      <link>https://www.charisseysabel.com/post/2017-03-06-on-being-productive/</link>
+      <pubDate>Mon, 06 Mar 2017 06:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-03-06-on-being-productive/</guid>
+      <description>I&amp;rsquo;ve read a lot of articles about productivity. I like to read them because they&amp;rsquo;re motivating, promising satisfaction and a great sense of achievement. Sometimes they even introduce new apps or new methods, which are interesting discoveries on its own.
+But a couple weeks back, I was looking at my to-do list and I realized that I had &amp;rdquo;so much to do&amp;rdquo; but at the end of the day, I still didn&amp;rsquo;t feel productive.</description>
+    </item>
+    
+    <item>
+      <title>5 Lessons from Reading 3 UI/UX Books</title>
+      <link>https://www.charisseysabel.com/post/2016-11-06-5-lessons-from-3-ui-ux-books/</link>
+      <pubDate>Sun, 06 Nov 2016 06:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2016-11-06-5-lessons-from-3-ui-ux-books/</guid>
+      <description>I&amp;rsquo;ve been out of the blogging wagon for a long time &amp;ndash; but for a good reason! I was hired as a Junior UI Developer at Small Improvements and have been living in Berlin since September. I&amp;rsquo;ll skip everything about how I get hired for another post and focus more on the current topic.
+As a (self-taught) developer who has only been coding for a year, I am aware that I have a huge knowledge gap.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.charisseysabel.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/about/</guid>
+      <description>asdas</description>
+    </item>
+    
+  </channel>
+</rss>

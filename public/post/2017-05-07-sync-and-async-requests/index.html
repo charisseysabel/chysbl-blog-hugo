@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Charisse Writes  | Synchronous and Asynchronous Requests in Javascript</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.49.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Synchronous and Asynchronous Requests in Javascript" />
+<meta property="og:description" content="There are 2 types of requests that can Javascript can make: Synchronous and Asynchronous. But what is the difference between the two? And how do you make such requests?
+The difference between synchronous and asynchronous requests can be best explained by one of the comments from Stack Overflow:
+ SYNCHRONOUS
+You are in a queue to get a movie ticket. You cannot get one until everybody in front of you gets one, and the same applies to the people queued behind you." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.charisseysabel.com/post/2017-05-07-sync-and-async-requests/" /><meta property="article:published_time" content="2017-05-07T09:34:24&#43;00:00"/>
+<meta property="article:modified_time" content="2017-05-07T09:34:24&#43;00:00"/>
+
+<meta itemprop="name" content="Synchronous and Asynchronous Requests in Javascript">
+<meta itemprop="description" content="There are 2 types of requests that can Javascript can make: Synchronous and Asynchronous. But what is the difference between the two? And how do you make such requests?
+The difference between synchronous and asynchronous requests can be best explained by one of the comments from Stack Overflow:
+ SYNCHRONOUS
+You are in a queue to get a movie ticket. You cannot get one until everybody in front of you gets one, and the same applies to the people queued behind you.">
+
+
+<meta itemprop="datePublished" content="2017-05-07T09:34:24&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-07T09:34:24&#43;00:00" />
+<meta itemprop="wordCount" content="988">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Synchronous and Asynchronous Requests in Javascript"/>
+<meta name="twitter:description" content="There are 2 types of requests that can Javascript can make: Synchronous and Asynchronous. But what is the difference between the two? And how do you make such requests?
+The difference between synchronous and asynchronous requests can be best explained by one of the comments from Stack Overflow:
+ SYNCHRONOUS
+You are in a queue to get a movie ticket. You cannot get one until everybody in front of you gets one, and the same applies to the people queued behind you."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-light-yellow">
+      <nav class="pv3 ph3 ph4-ns bg-white" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://www.charisseysabel.com/" class="f3 fw4 black no-underline white-90 dib">
+      Charisse Writes
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7 bg-white" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Synchronous and Asynchronous Requests in Javascript</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-05-07T09:34:24Z">May 7, 2017</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>There are 2 types of requests that can Javascript can make: Synchronous and Asynchronous. But what is the difference between the two? And how do you make such requests?</p>
+
+<p>The difference between synchronous and asynchronous requests can be best explained by <a href="http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean">one of the comments from Stack Overflow</a>:</p>
+
+<blockquote>
+<p>SYNCHRONOUS</p>
+
+<p>You are in a queue to get a movie ticket. You cannot get one until everybody in front of you gets one, and the same applies to the people queued behind you.</p>
+
+<p>ASYNCHRONOUS</p>
+
+<p>You are in a restaurant with many other people. You order your food. Other people can also order their food, they don&rsquo;t have to wait for your food to be cooked and served to you before they can order. In the kitchen restaurant workers are continuously cooking, serving, and taking orders. People will get their food served as soon as it is cooked.
+Requesting data synchronously used to be the default way on how the browser works. When the script runs, the tasks are done one by one so if a request takes too long, the user is left hanging with a frozen browser. Another downside of this is every single request requires the entire page to be reloaded, adding to performance issues and bad user experience.</p>
+</blockquote>
+
+<p>The introduction of asynchronous requests took the web by storm. Things work a little differently when you request data asynchronously. Asynchronous requests allows you to move on to another task before the previous one ever finishes. This functionality was given the term AJAX, or Asynchronous JavaScript and XML. So whenever you hear the term AJAX it basically means that they are handling data asynchronously.</p>
+
+<h2 id="make-a-http-request">Make a HTTP Request</h2>
+
+<p>Now that we&rsquo;ve stated the difference and when they are most useful, how exactly do we make a HTTP request? In this quick tutorial, we&rsquo;re gonna request a JSON file from a GitHub Gist synchronously (and asynchronously!) using the XMLHttpRequest method. Note that there are other, more modern ways to make a HTTP request using plain old Javascript but we&rsquo;re gonna go with the most basic one for now.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//Instantiate a new XMLHttpRequest object
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+</code></pre></div>
+
+<p>If you log this variable in the console, you can see all the methods that are now available for us to use.</p>
+
+<h4 id="initialise-a-request">Initialise a request</h4>
+
+<p>The next step is to initialise a request using the <code>.open()</code> method. The <code>.open()</code> method takes 5 arguments, 3 of which are optional:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// syntax: xhr.open(&#39;method&#39;, &#39;url&#39;, [async, user, password])
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#e6db74">&#39;https://gist.githubusercontent.com/JulianvBeek/99a950c6711215d41a88d184ab99d75c/raw/d8a4a71e4356e1f163d815b398a6b1984715db87/site.json&#39;</span>);
+</code></pre></div>
+
+<p>Note that the third parameter, <code>async</code>, is a boolean that is default to <code>true</code>, which means that our request will be handled asynchronously (you should know what that means by now!). The <code>user</code> and <code>password</code> arguments are used for authentication and are <code>null</code> by default.</p>
+
+<p>Once we&rsquo;ve initialise a request, we then send it to the server:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>();
+</code></pre></div>
+Okay, our script now runs off to Serverland and fetches the data for us. Since we requested the data asynchronously, we can do other tasks instead of waiting for the response to return. But how do we know when the response has actually returned?</p>
+
+<h4 id="listening-for-an-event">Listening for an event</h4>
+
+<p>Once we&rsquo;ve sent a request to the server, we have to find out if the response has returned or if the request has failed. We do this by listening for a change in the <code>readyState()</code> method.</p>
+
+<p>When we first initialise a new XMLHttpRequest object, the value of <code>readyState</code> is <code>0</code>. Then, when we call the <code>open()</code> method, the readyState value changes to <code>1</code>. When we call <code>send()</code>, the value changes to <code>2</code>. <code>3</code> stands for <code>Loading</code>. We want to listen for a state change of <code>4</code>, which means that the operation is complete.</p>
+
+<p>What we can do is attach an event listener to our <code>xhr</code> variable, listening for the <code>readyStateChange</code> event, passing it a function that will be called when the state changes.</p>
+
+<p>The server also gives back a status code, indicating if the response was successfully completed. There are several status codes that you can check for, but for now, we&rsquo;ll specifically check for a successful request that has the code of 200:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;readystatechange&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>) {
+    <span style="color:#75715e">// do something with data
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;something went wrong.&#39;</span>);
+  }
+});
+</code></pre></div>
+
+<h4 id="process-the-data">Process the data</h4>
+
+<p>We made a request and confirmed that the status was successful. Now what?</p>
+
+<p>What we can do is to read the <code>responseText</code> property returned by the <code>xhr​</code> object. This returns a JSON in the form of a big string. We can use <code>JSON.parse</code> to convert the string into a real JSON format.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>));
+</code></pre></div>
+
+<p>Now you have a raw data that you can play around with!</p>
+
+<h2 id="synchronous-requests">Synchronous Requests</h2>
+
+<p>We can create synchronous requests using the XMLHttpRequest object by setting the third parameter to <code>false</code>. You might not notice the difference if you have a high speed internet but you can simulate a slow connection on the Network tab on your DevTools.</p>
+
+<p>From the <code>No throttling</code> dropdown, you can add your custom network throttling profile or select one from the dropdown.</p>
+
+<p>Next we add the third parameter to <code>xhr.open</code> and set it to false:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#e6db74">&#39;https://gist.githubusercontent.com/JulianvBeek/99a950c6711215d41a88d184ab99d75c/raw/d8a4a71e4356e1f163d815b398a6b1984715db87/site.json&#39;</span>, <span style="color:#66d9ef">false</span>);
+</code></pre></div>
+
+<p>Add another <code>console.log</code> statement after the HTTP request. Run the code and see what happens.</p>
+
+<p>See how the screen seems to have been frozen? With a slow connection combined with a synchronous request to the server, we didn&rsquo;t have a choice but to wait for the request to finish and come back before we can do something again.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Synchronous requests waits and blocks until the response come back. In most cases, we want to use asynchronous requests to give our users a better experience.</p>
+
+<p>Here&rsquo;s the full block of code:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+
+<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#e6db74">&#39;https://gist.githubusercontent.com/JulianvBeek/99a950c6711215d41a88d184ab99d75c/raw/d8a4a71e4356e1f163d815b398a6b1984715db87/site.json&#39;</span>, <span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>();
+
+<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;readystatechange&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span>);
+ <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>));
+ }
+ <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">404</span>){
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;missing file&#39;</span>);
+ }
+ <span style="color:#66d9ef">else</span> {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;something went wrong&#39;</span>);
+ }
+});
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hello&#39;</span>);
+</code></pre></div>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bottom-0 w-100 pa3 bg-light-yellow" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 black no-underline dn dib-ns pv2 ph3" href="https://www.charisseysabel.com/" >
+    &copy; 2018 Charisse Writes
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

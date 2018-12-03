@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Charisse Writes</title>
+    <link>https://www.charisseysabel.com/categories/design/</link>
+    <description>Recent content in Design on Charisse Writes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2017 09:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.charisseysabel.com/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2 Things that I Learned as a UI/UX Interviewer</title>
+      <link>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</link>
+      <pubDate>Sat, 02 Dec 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</guid>
+      <description>I’ve been on both sides of the interview process. And although there is a lot to say on what to do and what not to do as a interviewee, I thought I’d share the lessons that I’ve learned as an interviewer so that designers, who are just getting started in the field, can get an idea on what goes into an interviewer’s mind.
+These are all my opinions and may or may not be the same for every organization.</description>
+    </item>
+    
+    <item>
+      <title>5 Lessons from Reading 3 UI/UX Books</title>
+      <link>https://www.charisseysabel.com/post/2016-11-06-5-lessons-from-3-ui-ux-books/</link>
+      <pubDate>Sun, 06 Nov 2016 06:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2016-11-06-5-lessons-from-3-ui-ux-books/</guid>
+      <description>I&amp;rsquo;ve been out of the blogging wagon for a long time &amp;ndash; but for a good reason! I was hired as a Junior UI Developer at Small Improvements and have been living in Berlin since September. I&amp;rsquo;ll skip everything about how I get hired for another post and focus more on the current topic.
+As a (self-taught) developer who has only been coding for a year, I am aware that I have a huge knowledge gap.</description>
+    </item>
+    
+  </channel>
+</rss>

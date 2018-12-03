@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lessons on Charisse Writes</title>
+    <link>https://www.charisseysabel.com/categories/lessons/</link>
+    <description>Recent content in Lessons on Charisse Writes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2017 09:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.charisseysabel.com/categories/lessons/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2 Things that I Learned as a UI/UX Interviewer</title>
+      <link>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</link>
+      <pubDate>Sat, 02 Dec 2017 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</guid>
+      <description>I’ve been on both sides of the interview process. And although there is a lot to say on what to do and what not to do as a interviewee, I thought I’d share the lessons that I’ve learned as an interviewer so that designers, who are just getting started in the field, can get an idea on what goes into an interviewer’s mind.
+These are all my opinions and may or may not be the same for every organization.</description>
+    </item>
+    
+  </channel>
+</rss>

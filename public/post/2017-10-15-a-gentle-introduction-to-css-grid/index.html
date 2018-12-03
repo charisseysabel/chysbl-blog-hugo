@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Charisse Writes  | A Gentle Introduction to CSS Grid</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.49.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="A Gentle Introduction to CSS Grid" />
+<meta property="og:description" content="I wanted to take a look at CSS Grid for quite a while, so I rebuilt an old project using it.
+CSS Grids allow us to design a layout in a 2-dimensional style: horizontally and vertically. Unlike flexbox, which is only focused on only 1 dimension.
+I must admit that I was a bit hesitant about the idea of Grid because of the fact that flexbox has solved the problems that I faced with layouts today (at least most of them anyway)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.charisseysabel.com/post/2017-10-15-a-gentle-introduction-to-css-grid/" /><meta property="article:published_time" content="2017-10-15T09:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-10-15T09:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="A Gentle Introduction to CSS Grid">
+<meta itemprop="description" content="I wanted to take a look at CSS Grid for quite a while, so I rebuilt an old project using it.
+CSS Grids allow us to design a layout in a 2-dimensional style: horizontally and vertically. Unlike flexbox, which is only focused on only 1 dimension.
+I must admit that I was a bit hesitant about the idea of Grid because of the fact that flexbox has solved the problems that I faced with layouts today (at least most of them anyway).">
+
+
+<meta itemprop="datePublished" content="2017-10-15T09:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-10-15T09:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="708">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Gentle Introduction to CSS Grid"/>
+<meta name="twitter:description" content="I wanted to take a look at CSS Grid for quite a while, so I rebuilt an old project using it.
+CSS Grids allow us to design a layout in a 2-dimensional style: horizontally and vertically. Unlike flexbox, which is only focused on only 1 dimension.
+I must admit that I was a bit hesitant about the idea of Grid because of the fact that flexbox has solved the problems that I faced with layouts today (at least most of them anyway)."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-light-yellow">
+      <nav class="pv3 ph3 ph4-ns bg-white" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://www.charisseysabel.com/" class="f3 fw4 black no-underline white-90 dib">
+      Charisse Writes
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7 bg-white" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">A Gentle Introduction to CSS Grid</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-10-15T09:00:00Z">October 15, 2017</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>I wanted to take a look at CSS Grid for quite a while, so I rebuilt an old project using it.</p>
+
+<p>CSS Grids allow us to design a layout in a 2-dimensional style: horizontally and vertically. Unlike flexbox, which is only focused on only 1 dimension.</p>
+
+<p>I must admit that I was a bit hesitant about the idea of Grid because of the fact that flexbox has solved the problems that I faced with layouts today (at least most of them anyway).</p>
+
+<h4 id="but-what-exactly-is-the-difference-between-css-grid-and-flex-box">But what exactly is the difference between CSS Grid and flex box?</h4>
+
+<p>Rachel Andrew’s example was a good reference point for me to understand the difference. Basically, a layout that does not depend on the content’s width and height can benefit from a Grid layout. While a layout that needs its contents to flow and stretch would most likely have to use flexbox instead. But who says you can’t use them both at the same time?</p>
+
+<p>As a simple exercise, I want to rebuild my FCC project: Quote Generator. Currently this was built using absolute positioning, which is fine but not exactly that elegant. It’s worth looking back at it and see how CSS Grid can make a difference.</p>
+
+<p>Imagine adding an invisible grid on top of this layout. In the graphic design world, this is like activating the rulers inside Photoshop, which is what we usually do when it comes to aligning our items perfectly on the page. We create columns to align everything vertically, and set rows to align items horizontally.</p>
+
+<p><img src="/assets/img/with-guides.png" alt="Setting guides... you know what I mean" /></p>
+
+<h4 id="how-do-we-replicate-this-in-code">How do we replicate this in code?</h4>
+
+<p>If you’ve used Flexbox before, then its helpful to think that it works pretty much the same for Grid: enclosing a group of elements together inside a grid display activates a bunch of other attributes that can only be used inside the grid container.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid-container&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid-item&#34;</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;A reader lives a thousand lives before he dies, the man who never reads lives only one.&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">span</span>&gt;Alison Croggon, the Naming&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">grid-container</span> {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+}</code></pre></div>
+
+<p>Next, we can define our columns and rows using <code>grid-template-columns</code> and <code>grid-template-rows</code> which take a space-separated list of values. In our mock example, I’m setting the leftmost column to <code>300 pixels</code> and let the second column occupy the rest. You can set as many as you want depending on how many elements you have inside the grid-container. If you set less values than elements, the extra elements will automatically wrap and create a new row, following the same format as the row above it.</p>
+
+<p>I’m also setting the topmost row to be <code>200px</code> high and let the second column occupy the rest of the space.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">grid-container</span> {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">grid</span>;
+    grid-template-column: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">grid-template-rows</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+}</code></pre></div>
+
+<p><img src="/assets/img/with-grid.png" alt="Visualizing the grid" /></p>
+
+<p>A grid layout also wouldn’t be complete if there’s no way to add gaps between the items. We can use <code>grid-row-gap</code> and <code>grid-column-gap</code> to do just that. This might be useful should we add content to our currently-empty sidebar in the future. I like this feature a lot because it helps avoid the use of a container padding altogether.</p>
+
+<p>Optionally, we can use <code>grid-gap</code> as a shorthand notation for the 2 attributes above.</p>
+
+<p>Now, all that’s left is to explicitly position our quote at the bottom-right of our grid. We can do this using <code>grid-column</code> and <code>grid-row</code>. In the code below, we specify our item to start at grid line #2 (setting only one value makes the element stretch all the way to the last column). We do the same for the row position.</p>
+
+<p><img src="/assets/img/grid-columns-and-rows.png" alt="Grid and column lines" /></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">grid-item</span> {
+    <span style="color:#66d9ef">grid-column</span>: <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">grid-row</span>: <span style="color:#ae81ff">2</span>;
+}</code></pre></div>
+
+<h4 id="what-about-responsiveness">What about responsiveness?</h4>
+
+<p>Responsiveness can be achieved through the combination of media queries and modifying our <code>grid-template-columns</code> into a single value, forcing the elements to align vertically and re-arrange our grid-item’s columns and rows accordingly. It’s not very elegant, but it does the job.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>CSS Grids allow us to design a layout in 2 dimensions: horizontally and vertically. A layout that does not depend on the content’s width and height can most certainly benefit from using Grid. Despite it being not entirely supported yet, especially in the older versions of IE, CSS Grid gives us an entirely new way of building layout for our websites. Definitely worth keeping an eye out for!</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bottom-0 w-100 pa3 bg-light-yellow" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 black no-underline dn dib-ns pv2 ph3" href="https://www.charisseysabel.com/" >
+    &copy; 2018 Charisse Writes
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

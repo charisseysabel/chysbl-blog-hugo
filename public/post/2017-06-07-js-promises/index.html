@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Charisse Writes  | JS Promises</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.49.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="JS Promises" />
+<meta property="og:description" content="In the previous post, we used the XMLHttpRequest object which is a very simple and basic way of requesting data from the server. Recently, the ECMAScript 6 introduced a new API called Promises in the hopes of making asynchronous requests more pleasant. We’re gonna take a look at what Promises are and understand them through a little bit of an exercise.
+What are Promises? I have to admit that when I first heard someone say, “It returns a Promise”, I immediately go blank." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.charisseysabel.com/post/2017-06-07-js-promises/" /><meta property="article:published_time" content="2017-06-07T09:34:24&#43;00:00"/>
+<meta property="article:modified_time" content="2017-06-07T09:34:24&#43;00:00"/>
+
+<meta itemprop="name" content="JS Promises">
+<meta itemprop="description" content="In the previous post, we used the XMLHttpRequest object which is a very simple and basic way of requesting data from the server. Recently, the ECMAScript 6 introduced a new API called Promises in the hopes of making asynchronous requests more pleasant. We’re gonna take a look at what Promises are and understand them through a little bit of an exercise.
+What are Promises? I have to admit that when I first heard someone say, “It returns a Promise”, I immediately go blank.">
+
+
+<meta itemprop="datePublished" content="2017-06-07T09:34:24&#43;00:00" />
+<meta itemprop="dateModified" content="2017-06-07T09:34:24&#43;00:00" />
+<meta itemprop="wordCount" content="791">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS Promises"/>
+<meta name="twitter:description" content="In the previous post, we used the XMLHttpRequest object which is a very simple and basic way of requesting data from the server. Recently, the ECMAScript 6 introduced a new API called Promises in the hopes of making asynchronous requests more pleasant. We’re gonna take a look at what Promises are and understand them through a little bit of an exercise.
+What are Promises? I have to admit that when I first heard someone say, “It returns a Promise”, I immediately go blank."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-light-yellow">
+      <nav class="pv3 ph3 ph4-ns bg-white" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://www.charisseysabel.com/" class="f3 fw4 black no-underline white-90 dib">
+      Charisse Writes
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7 bg-white" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">JS Promises</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-06-07T09:34:24Z">June 7, 2017</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>In the previous post, we used the XMLHttpRequest object which is a very simple and basic way of requesting data from the server. Recently, the ECMAScript 6 introduced a new API called Promises in the hopes of making asynchronous requests more pleasant. We’re gonna take a look at what Promises are and understand them through a little bit of an exercise.</p>
+
+<h2 id="what-are-promises">What are Promises?</h2>
+
+<p>I have to admit that when I first heard someone say, “It returns a Promise”, I immediately go blank. What do you mean by “Promise”?</p>
+
+<p><em>In all simplicity, Promises are just objects.</em> They serve as placeholders for the data you’re retrieving that has not yet returned. A Promise object immediately returns even before the HTTP Request has been resolved.</p>
+
+<p>Promises have a <code>then</code> method. Therefore, a promise is considered <code>thenable</code>.</p>
+
+<p>To understand the benefit of the <code>then</code> method, let’s take a step back and see how a typical HTTP request is made <em>without</em> a Promise.</p>
+
+<p>Suppose that you want to retrieve 2 sets of data from the server — where the second dataset somewhat relies on the result of the first. You then write 2 async HTTP request you fire <em>another</em> HTTP request from the callback function of the first request.</p>
+
+<p>This method can easily go out of hand, which is then referred to as “ <a href="http://callbackhell.com/">callback hell</a> “ where you invoke callbacks from callbacks from callbacks. Even though there are multiple ways of making it not look too complicated, using the Promise API is much more cleaner and easier to maintain and understand.</p>
+
+<h2 id="how-does-a-promise-work">How does a Promise work?</h2>
+
+<p>A Promise takes a function as a callback. That function takes two arguments:</p>
+
+<ul>
+<li>a function that is called when the request is resolved / successful (usually named &ldquo;resolve&rdquo;)</li>
+<li>another function that is called when the request has failed (usually named &ldquo;reject&rdquo;)</li>
+</ul>
+
+<p>Note that those 2 functions are already prepared for you; you just need to use it accordingly.</p>
+
+<p>Let’s create function that performs a simple asynchronous HTTP request. We wrap our HTTP request in a new Promise.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">url</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#a6e22e">url</span>, <span style="color:#66d9ef">true</span>);
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>();
+
+    <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;readystatechange&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>) {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>));
+      }
+      <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span>);
+      }
+    });
+  });
+}
+</code></pre></div>
+
+<p>Remember when I mentioned that the function arguments &ndash; resolve and reject &ndash; are already prepared for us? Notice how they are being used according to the result of the request.</p>
+
+<p>Above the <code>getAnimals</code> function, we assign a GitHub Gist (that returns a json data) to a variable called <code>pets</code>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pets</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://gist.githubusercontent.com/JulianvBeek/99a950c6711215d41a88d184ab99d75c/raw/d8a4a71e4356e1f163d815b398a6b1984715db87/site.json&#39;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">url</span>) { ... }
+</code></pre></div>
+
+<p>We then call our <code>getAnimals</code> function, passing the <code>pets</code> variable as the argument:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pets</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘…’</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">url</span>) {<span style="color:#960050;background-color:#1e0010">…</span>}
+
+<span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">pets</span>);
+</code></pre></div>
+
+<p>Now you may be wondering, what happens once the data has been successfully retrieved from the server? That’s when the <code>.then</code> method comes in.</p>
+
+<p>When we call the <code>getAnimals</code> function for the first time, it returns a new Promise object, which means that we get access to the <code>.then</code> method.</p>
+
+<p>The <code>.then</code> method takes a callback function. And inside that function, you can access the data that is returned. To catch any errors, we add the <code>.catch</code> method at the end of the chain.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">pets</span>)
+  .<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">getAnimals</span>(<span style="color:#a6e22e">zoo</span>);
+  })
+  .<span style="color:#66d9ef">catch</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;error!&#39;</span>);
+});
+</code></pre></div>
+
+<p><em>Okay, that’s cool. But what if we need to call multiple HTTP requests?</em>
+To perform multiple HTTP requests, we call our <code>getAnimals</code> function inside the <code>.then</code> method’s callback function. Remember how our <code>getAnimals</code> function returns a new Promise object? That means we’ll have access to another <code>.then</code> method, which we can use once the second dataset has been successfully retrieved.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">pets</span>)
+  .<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">zoo</span>); <span style="color:#75715e">// call the get() function
+</span><span style="color:#75715e"></span>  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">zooData</span>) { <span style="color:#75715e">// do something with the second data set once it has returned
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">zooData</span>);
+  })
+  .<span style="color:#66d9ef">catch</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;error!&#39;</span>);
+});
+</code></pre></div>
+
+<blockquote>
+<p>You could compare the Promise API to the step by step of making a burger. First, you run off to get the bottom bun (initial request). When I have my bottom bun, I can THEN put in the lettuce, THEN the patty, THEN some cheese, THEN tomatoes, and so on. If, for some reason I am missing a bottom bun, I have to return to the customer and tell them that we can’t make burgers anymore (stating the error)</p>
+</blockquote>
+
+<h2 id="support">Support</h2>
+
+<p>Note that Promises are not being supported across all browsers so you have to use polyfills!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Promises serve as placeholders for the data you’re retrieving that has not yet returned. It gives us to have access to a <code>.then</code> method which allows us to access the data that has been returned. Promises makes asynchronous HTTP request easier to understand and maintain, avoiding what is known as “callback hell”.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bottom-0 w-100 pa3 bg-light-yellow" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 black no-underline dn dib-ns pv2 ph3" href="https://www.charisseysabel.com/" >
+    &copy; 2018 Charisse Writes
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

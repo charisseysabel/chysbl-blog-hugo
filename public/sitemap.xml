@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2018-04-22-trello-replica-using-react/</loc>
+    <lastmod>2018-04-22T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2018-03-17-social-innovation-summit/</loc>
+    <lastmod>2018-03-17T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2018-02-23-increase-color-contrast-with-css-vars/</loc>
+    <lastmod>2018-02-23T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-12-31-2017-a-year-of-change/</loc>
+    <lastmod>2017-12-31T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-12-2-2-things-that-i-learned-as-a-ui-ux-interviewer/</loc>
+    <lastmod>2017-12-02T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-10-15-a-gentle-introduction-to-css-grid/</loc>
+    <lastmod>2017-10-15T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-09-15-test-driven-development-with-mocha-and-chai/</loc>
+    <lastmod>2017-09-15T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-09-02-3-things-to-keep-in-mind-when-starting-a-blog/</loc>
+    <lastmod>2017-09-02T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-08-19-living-zero-waste/</loc>
+    <lastmod>2017-08-19T09:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-08-05-the-grunt-task-runner/</loc>
+    <lastmod>2017-08-05T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-07-15-goals-without-deadlines/</loc>
+    <lastmod>2017-07-15T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-07-03-up-and-running-with-webpack/</loc>
+    <lastmod>2017-07-03T09:34:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-06-07-js-promises/</loc>
+    <lastmod>2017-06-07T09:34:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-05-07-sync-and-async-requests/</loc>
+    <lastmod>2017-05-07T09:34:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2017-03-06-on-being-productive/</loc>
+    <lastmod>2017-03-06T06:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/2016-11-06-5-lessons-from-3-ui-ux-books/</loc>
+    <lastmod>2016-11-06T06:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/</loc>
+    <lastmod>2018-04-22T08:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/conference/</loc>
+    <lastmod>2018-03-17T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/design/</loc>
+    <lastmod>2017-12-02T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/lessons/</loc>
+    <lastmod>2017-12-02T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/lifestyle/</loc>
+    <lastmod>2017-08-19T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/personal/</loc>
+    <lastmod>2017-12-31T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/personal-development/</loc>
+    <lastmod>2017-09-02T09:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/post/</loc>
+    <lastmod>2018-04-22T08:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.charisseysabel.com/categories/tutorial/</loc>
+    <lastmod>2018-04-22T08:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
